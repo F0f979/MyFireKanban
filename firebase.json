@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "my-kanban-fire",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

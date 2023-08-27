@@ -4,6 +4,7 @@ import { CdkDragDrop, transferArrayItem } from '@angular/cdk/drag-drop';
 import { MatDialog } from '@angular/material/dialog';
 import { TaskDialogComponent, TaskDialogResult } from './task-dialog/task-dialog.component';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -19,7 +20,7 @@ export class AppComponent {
     },
     {
       title: 'Achat du materiel',
-      description: 'Acheter des pinceaux, une blouse, des proteges a la quicaillerie'
+      description: 'Acheter des pinceaux, une blouse, des proteges a la quincaillerie'
     }
   ];
   inProgress: Task[] = [];

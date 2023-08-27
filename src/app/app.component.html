@@ -1,9 +1,8 @@
-<!-- <mat-toolbar color="primary">
+<mat-toolbar color="primary">
   <mat-icon>local_fire_department</mat-icon>
   <span>My Fire Kanban</span>
 </mat-toolbar>
-
-<app-task *ngFor="let task of todo" [task]="task"></app-task> -->
+<!-- <app-task *ngFor="let task of todo" [task]="task"></app-task> -->
 
 <div class="content-wrapper">
   <button (click)="newTask()" mat-button>
@@ -11,7 +10,7 @@
   </button>
   <div class="container-wrapper">
     <div class="container">
-      <h2>Backlog</h2>
+      <h2 style="color: red;">Backlog</h2>
 
       <mat-card
         cdkDropList
@@ -20,14 +19,15 @@
         [cdkDropListData]="todo"
         [cdkDropListConnectedTo]="[doneList, inProgressList]"
         (cdkDropListDropped)="drop($event)"
-        class="list">
+        class="list"
+        style="padding: 10px;">
         <p class="empty-label" *ngIf="todo.length === 0">Empty list</p>
         <app-task (edit)="editTask('todo', $event)" *ngFor="let task of todo" cdkDrag [task]="task"></app-task>
       </mat-card>
     </div>
 
     <div class="container">
-      <h2>In progress</h2>
+      <h2 style="color: blue;">In progress</h2>
 
       <mat-card
         cdkDropList
@@ -36,14 +36,15 @@
         [cdkDropListData]="inProgress"
         [cdkDropListConnectedTo]="[todoList, doneList]"
         (cdkDropListDropped)="drop($event)"
-        class="list">
+        class="list"
+        style="padding: 10px;">
         <p class="empty-label" *ngIf="inProgress.length === 0">Empty list</p>
         <app-task (edit)="editTask('inProgress', $event)" *ngFor="let task of inProgress" cdkDrag [task]="task"></app-task>
       </mat-card>
     </div>
 
     <div class="container">
-      <h2>Done</h2>
+      <h2 style="color: green;">Done</h2>
 
       <mat-card
         cdkDropList
@@ -52,7 +53,8 @@
         [cdkDropListData]="done"
         [cdkDropListConnectedTo]="[todoList, inProgressList]"
         (cdkDropListDropped)="drop($event)"
-        class="list">
+        class="list"
+        style="padding: 10px;">
         <p class="empty-label" *ngIf="done.length === 0">Empty list</p>
         <app-task (edit)="editTask('done', $event)" *ngFor="let task of done" cdkDrag [task]="task"></app-task>
       </mat-card>

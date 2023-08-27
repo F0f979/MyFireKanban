@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ang-fire-a3c1d": {
+      "hosting": {
+        "my-kanban-fire": [
+          "ang-fire-a3c1d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ang-fire-a3c1d"
+  }
+}
